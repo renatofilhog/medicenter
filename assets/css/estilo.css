@@ -85,11 +85,13 @@ nav a:hover {
 
 .mid_banners {
 	display: flex;
-	height: 210px;
+	height: auto;
 }
 
 .minibanner1, .minibanner2, .minibanner3 {
 	flex:1;
+	padding-top: 25px;
+	padding-bottom: 15px;
 }
 .mid_banners a {
 	margin-top: 30px;
@@ -311,7 +313,7 @@ nav a:hover {
 }
 footer {
 	margin-top: 50px;
-	background-color: #000000;
+	background-color: #1e1e1e;
 }
 .footer_banners {
 	display: flex;
@@ -423,4 +425,77 @@ footer h2 {
 .footer_content a {
 	color: #FFF;
 	text-decoration: none;
+}
+
+.menuMobile {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+.mmline {
+	width: 40px;
+	background-color: #42b3e5;
+	height: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+	header .container {
+		flex-direction: row-reverse;
+		align-items: center;
+		padding: 0px 25px;
+	}
+	.menuMobile {
+		display: flex;
+	}
+	.menu {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	.mid_banners {
+		height: auto;
+		flex-direction: column;
+	}
+	#banner {
+		height: auto;
+	}
+	.headline {
+		min-height: 400px;
+		padding-left: 20px;
+	}
+	.headline h2 {
+		font-size: 18px;
+	}
+	.headline h1 {
+		font-size: 50px;
+	}
+
+	#body_content .container {
+		flex-direction: column;
+	}
+	.lastnews,
+	aside {
+		margin-left: 20px;
+	}
+
+	aside {
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	.footer_banners {
+		flex-direction: column;
+	}
+	footer .widget_footer {
+		margin-left: 20px;
+	}
+	footer .footer_content {
+		padding-left: 20px
+	}
 }
