@@ -6,6 +6,20 @@
 	<title>Medicenter template - Responsive</title>
 	<link href="assets/imgs/icon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="assets/css/estilo.css">
+	<script type="text/javascript">
+		window.onload = function(){
+			var menuMobile = document.querySelector(".menuMobile");
+			menuMobile.addEventListener("click", function(){
+				var menu = document.querySelector("nav ul");
+				if(menu.style.display == 'flex') {
+					menu.style.display = 'none'
+				} else {
+					menu.style.display = 'flex'
+				}
+			});
+		};
+		
+	</script>
 </head>
 <body>
 	<header class="flex center">
@@ -13,13 +27,13 @@
 			<div class="logo">
 				<img src="assets/imgs/logo.png" alt="">
 			</div>
-			<div class="menuMobile">
-				<div class="mmline"></div>
-				<div class="mmline"></div>
-				<div class="mmline"></div>
-				<div class="mmline"></div>
-			</div>
 			<div class="menu">
+				<div class="menuMobile">
+					<div class="mmline"></div>
+					<div class="mmline"></div>
+					<div class="mmline"></div>
+					<div class="mmline"></div>
+				</div>
 				<nav>
 					<ul>
 						<li><a class="active" href="#">Home</a></li>
